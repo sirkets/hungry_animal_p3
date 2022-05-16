@@ -19,6 +19,7 @@ public class Elephant extends Actor
     public void eat()
     {
         if(isTouching(Apple.class)){
+            Greenfoot.playSound("sounds/elephantcub.mp3");
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             world.increaseScore();
