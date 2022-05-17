@@ -2,6 +2,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Elephant extends Actor
 {
+    private GreenfootImage[] images;
+    
+    public Elephant(){
+        //GreenfootImage image = new GreenfootImage("images/elephant_idle/idle0.png");
+        images = new GreenfootImage[8];
+        images[0] = new GreenfootImage("images/elephant_idle/idle0.png");
+        for(int i = 0; i < images.length; i++){
+            images[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        }
+        setImage(images[3]);
+    }
+    
+    int curIndex = 0;
+    public void animate()
+    {
+        setImage(images[curIndex]);
+        curIndex++;
+        curIndex %= 8;
+    }
+    
     public void act()
     {
         // Add your action code here.
@@ -13,7 +33,7 @@ public class Elephant extends Actor
         }
         
         eat();
-        
+        animate();
     }
     
     public void eat()
