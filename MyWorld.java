@@ -24,6 +24,9 @@ public class MyWorld extends World
         
         // add an apple
         spawnApple();
+        
+        Rock rock = new Rock();
+        addObject(rock, 0,0);
     }
     
     public void spawnApple()
