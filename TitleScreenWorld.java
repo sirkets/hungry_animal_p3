@@ -20,7 +20,7 @@ public class TitleScreenWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
-        Label titleLabel = new Label("Hungry Elephant", 70);
+        Label titleLabel = new Label("Hungry Elephant!!", 70);
         addObject(titleLabel, 300, 200);
         Label instructionsLabel = new Label("Press <space> to begin", 50);
         addObject(instructionsLabel, 300, 270);
